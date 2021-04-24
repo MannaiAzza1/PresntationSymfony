@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Article ajoutée{% endblock %}</title>
+
+    </head>
+    <body>
+        {% block body %}
+        <h2> Article num {{article.id}} Ajoutée!</h2> 
+        <ul>
+        <li>{{article.titre}}</li>
+        <li>{{article.auteur}}</li>
+        <li> Image num{{article.image.id}}<li>
+    
+        <ul>
+        <li>{{article.image.alt}}</li>
+        <li>{{article.image.url}}</li>
+        </ul>
+        </ul>
+        <h2> Les commentaires </h2>
+        <ul>
+        <li> Le contenu du commentaire :  {{commentaire1.contenu}}</li>
+        <li> Auteur Article : {{commentaire1.article.auteur}}</li>
+        <li> Titre Article : {{commentaire1.article.titre}}</li>
+        </ul>
+       {% endblock %}
+    </body>
+</html>
